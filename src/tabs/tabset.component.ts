@@ -10,7 +10,7 @@ import { TabsetConfig } from './tabset.config';
     <ul class="nav" [ngClass]="classMap" (click)="$event.preventDefault()">
         <li *ngFor="let tabz of tabs" [ngClass]="['nav-item', tabz.customClass || '']"
           [class.active]="tabz.active" [class.disabled]="tabz.disabled">
-          <a href="javascript:void(0);" class="nav-link"
+          <a href="javascript:void(0);" class="nav-link" [style.borderTop]="tabz.borderTop"
             [class.active]="tabz.active" [class.disabled]="tabz.disabled"
             (click)="tabz.active = true">
             <span [ngTransclude]="tabz.headingRef">{{tabz.heading}}</span>

@@ -6,6 +6,8 @@ import { TabsetComponent } from './tabset.component';
 export class TabDirective implements OnInit, OnDestroy {
   /** tab header text */
   @Input() public heading: string;
+  /** add top border for tab */
+  @Input() public borderTop: string;
   /** tab id */
   @Input() public id: string;
   /** if true tab can not be activated */
