@@ -1,4 +1,4 @@
-import {
+﻿import {
   Directive,
   EventEmitter,
   HostBinding,
@@ -19,6 +19,7 @@ export class TabDirective implements OnInit, OnDestroy {
   /** tab id. The same id with suffix '-link' will be added to the corresponding &lt;li&gt; element  */
   @HostBinding('attr.id')
   @Input() id: string;
+  @Input() borderTop: string;
   /** if true tab can not be activated */
   @Input() disabled: boolean;
   /** if true tab can be removable, additional button will appear */
